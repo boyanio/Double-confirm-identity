@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Double confirm identity example</h1>
+    <p class="lead">Here you can see how it works</p>
+    @if (Request.IsAuthenticated)
+    {
+        <p><a href="@Url.Action("Index", "Profile")" class="btn btn-primary btn-lg">Profile &raquo;</a></p>
+        <p><a href="@Url.Action("Secured", "Profile")" class="btn btn-primary btn-lg">Secured &raquo;</a></p>
+    }
+    else
+    {
+        <p><a href="@Url.Action("Login", "Account")" class="btn btn-primary btn-lg">Log in &raquo;</a></p>
+    }
+</div>

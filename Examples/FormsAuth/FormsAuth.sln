@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleConfirmIdentity.Examples.FormsAuth", "FormsAuth\DoubleConfirmIdentity.Examples.FormsAuth.csproj", "{BB503BEA-C583-4904-8254-0A47B13A8F06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleConfirmIdentity", "..\..\Source\DoubleConfirmIdentity\DoubleConfirmIdentity.csproj", "{F804C69F-227A-4877-B320-12338AB7C113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleConfirmIdentity.Mvc5", "..\..\Source\DoubleConfirmIdentity.Mvc5\DoubleConfirmIdentity.Mvc5.csproj", "{BDB308A1-773B-4C16-A4E9-3AF9BA841A22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{8F1E422E-CA2B-4F87-8850-531726669F92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB503BEA-C583-4904-8254-0A47B13A8F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB503BEA-C583-4904-8254-0A47B13A8F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB503BEA-C583-4904-8254-0A47B13A8F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB503BEA-C583-4904-8254-0A47B13A8F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F804C69F-227A-4877-B320-12338AB7C113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F804C69F-227A-4877-B320-12338AB7C113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F804C69F-227A-4877-B320-12338AB7C113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F804C69F-227A-4877-B320-12338AB7C113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB308A1-773B-4C16-A4E9-3AF9BA841A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB308A1-773B-4C16-A4E9-3AF9BA841A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB308A1-773B-4C16-A4E9-3AF9BA841A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB308A1-773B-4C16-A4E9-3AF9BA841A22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F804C69F-227A-4877-B320-12338AB7C113} = {8F1E422E-CA2B-4F87-8850-531726669F92}
+		{BDB308A1-773B-4C16-A4E9-3AF9BA841A22} = {8F1E422E-CA2B-4F87-8850-531726669F92}
+	EndGlobalSection
+EndGlobal
