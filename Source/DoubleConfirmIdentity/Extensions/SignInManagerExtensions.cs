@@ -1,11 +1,11 @@
-﻿using DoubleConfirmIdentity;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Unipension.SelfService.Web.Auth.DoubleConfirmIdentity;
 
-namespace Microsoft.AspNet.Identity.Owin
+namespace DoubleConfirmIdentity
 {
     public static class SignInManagerExtensions
     {
@@ -32,7 +32,7 @@ namespace Microsoft.AspNet.Identity.Owin
                 TUser user = await signInManager.UserManager.FindByNameAsync(userName);
                 string userIdString = signInManager.ConvertIdToString(user.Id);
                 AuthenticationResponseGrant grant = signInManager.AuthenticationManager.AuthenticationResponseGrant;
-                grant.Identity.AddClaim(new Claim(DoubleConfirmIdentityConstants.ClaimName, userIdString));
+                grant.Identity.AddClaim(new Claim(DoubleConfirmIdentityConstants.ClaimType, userIdString));
                 signInManager.AuthenticationManager.SignIn(grant.Properties, grant.Identity);
             }
             return status;
@@ -74,7 +74,7 @@ namespace Microsoft.AspNet.Identity.Owin
                     {
                         string userIdString = signInManager.ConvertIdToString(userId);
                         ClaimsIdentity newIdentity = new ClaimsIdentity(identity);
-                        newIdentity.AddClaim(new Claim(DoubleConfirmIdentityConstants.ClaimName, userIdString));
+                        newIdentity.AddClaim(new Claim(DoubleConfirmIdentityConstants.ClaimType, userIdString));
                         signInManager.AuthenticationManager.SignIn(newIdentity);
                         status = SignInStatus.Success;
                     }

@@ -11,7 +11,7 @@ namespace DoubleConfirmIdentity.Mvc5
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             ClaimsPrincipal principal = httpContext.User as ClaimsPrincipal;
-            return principal != null && principal.Claims.Any(x => x.Type == DoubleConfirmIdentityConstants.ClaimName);
+            return principal != null && principal.Claims.Any(x => x.Type == DoubleConfirmIdentityConstants.ClaimType);
         }
 
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)

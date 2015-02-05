@@ -1,6 +1,5 @@
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using Unipension.SelfService.Web.Auth.DoubleConfirmIdentity;
 
 namespace DoubleConfirmIdentity
 {

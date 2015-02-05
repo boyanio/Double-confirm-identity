@@ -1,7 +1,6 @@
-﻿using DoubleConfirmIdentity;
-using Owin;
+﻿using Owin;
 
-namespace Unipension.SelfService.Web.Auth.DoubleConfirmIdentity
+namespace DoubleConfirmIdentity
 {
     public static class OwinExtensions
     {

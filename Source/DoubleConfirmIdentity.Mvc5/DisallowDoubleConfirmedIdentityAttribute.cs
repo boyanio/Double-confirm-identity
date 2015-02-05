@@ -13,7 +13,7 @@ namespace DoubleConfirmIdentity.Mvc5
             base.OnActionExecuting(filterContext);
 
             ClaimsPrincipal principal = filterContext.HttpContext.User as ClaimsPrincipal;
-            if (principal != null && principal.Identity.IsAuthenticated && principal.HasClaim(c => c.Type == DoubleConfirmIdentityConstants.ClaimName))
+            if (principal != null && principal.Identity.IsAuthenticated && principal.HasClaim(c => c.Type == DoubleConfirmIdentityConstants.ClaimType))
             {
                 filterContext.Result = new RedirectResult("/");
             }

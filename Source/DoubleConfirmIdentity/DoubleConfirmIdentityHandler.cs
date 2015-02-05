@@ -1,11 +1,9 @@
-using System;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Infrastructure;
-using Unipension.SelfService.Web.Auth.DoubleConfirmIdentity;
+using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace DoubleConfirmIdentity
 {
@@ -14,11 +12,12 @@ namespace DoubleConfirmIdentity
         protected override Task ApplyResponseChallengeAsync()
         {
             if (Response.StatusCode != 401 || !Options.RedirectPath.HasValue || !Request.User.Identity.IsAuthenticated
-                || ((ClaimsPrincipal)Request.User).Claims.Any(x => x.Type == DoubleConfirmIdentityConstants.ClaimName))
+                || ((ClaimsPrincipal)Request.User).HasClaim(x => x.Type == DoubleConfirmIdentityConstants.ClaimType))
             {
                 return Task.FromResult(0);
             }
 
+            // Check for an issued challenge
             AuthenticationResponseChallenge challenge = Helper.LookupChallenge(Options.AuthenticationType, Options.AuthenticationMode);
             if (challenge != null)
             {
