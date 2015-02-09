@@ -7,4 +7,4 @@ A user logs in using any popular method, f.x., forms authentication, which resul
 Of course users may choose to log in directly the more secure way and will automatically get access to all resources on your web site.
 
 # How it works
-ASP.NET Identity relies on claims. When the user logs in second time, a special claim is added to his identity.
+ASP.NET Identity relies on claims. When the user logs in second time, a special claim is added to his identity. You can check the [code](https://github.com/boyanin/Double-confirm-identity/tree/master/Examples/FormsAuth) of example project.
